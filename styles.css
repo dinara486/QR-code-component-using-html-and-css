@@ -1,0 +1,81 @@
+body {
+    display:flex;
+    flex-direction: column;
+    justify-content: center; /* Centers vertically */
+    align-items: center;    /* Centers horizontally */
+    height: 100vh;          /* Ensures body fills the viewport height */
+    background-color: #D5E1EF;
+    margin: 0;              /* Removes any default margin from body */
+    font-size: 15px;
+}
+
+.content {
+    display: flex;
+    padding: var(--spacing-200, 16px) var(--spacing-200, 16px) var(--spacing-500, 40px) var(--spacing-200, 16px);
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-300, 24px);
+    border-radius: 20px;
+    background: var(--color-white, #FFF);
+
+    /* card-shadow */
+    box-shadow: 0px 25px 25px 0px rgba(0, 0, 0, 0.05);
+
+    /* Width calculation: qr-image width + horizontal padding (16px * 2) */
+    width: calc(288px + 32px); 
+}
+
+.content img {
+    width: 290px;
+    height: 290px;
+    flex-shrink: 0;
+}
+
+.qr-image {
+    width: 299px;
+    height: 299px;
+    border-radius: 10px;
+    background: var(--color-blue-600, #2C7DFA);
+}
+
+.text-div {
+    display: flex;
+    padding: 0px var(--spacing-200, 16px);
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-200, 16px);
+    align-self: stretch;
+    border: 1px solid rgb(243, 238, 238);
+}
+
+.improve {
+    align-self: stretch;
+    color: var(--color-slate-900, #032468);
+    text-align: center;
+    font-feature-settings: 'liga' off, 'clig' off;
+
+    /* text-preset-1 */
+    font-family: Outfit;
+    font-size: var(--font-size-text-preset-1, 22px);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%; /* 26.4px */
+
+    border: 1px solid rgb(239, 239, 240);
+}
+
+.scan {
+    align-self: stretch;
+    color: var(--color-slate-500, #043885);
+    text-align: center;
+    font-feature-settings: 'liga' off, 'clig' off;
+
+    /* text-preset-2 */
+    font-family: Outfit;
+    font-size: var(--font-size-text-preset-2, 15px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; /* 21px */
+    letter-spacing: 0.2px;
+    border: 1px solid rgb(228, 228, 228);
+}
